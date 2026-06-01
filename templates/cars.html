@@ -1,0 +1,39 @@
+{% extends 'carbase.html' %}
+
+{% block content %}
+<main class="main-content">
+    <div class="page-header">
+        <h1>POPULAR PERFORMANCE CATEGORIES</h1>
+        <p>Precision and Performance in One.</p>
+    </div>
+    <div class="category-filters">
+        <button class="category-btn primary">CATEGORIES</button>
+        <button class="category-btn active">SUVs</button>
+        <button class="category-btn">Sedans</button>
+        <button class="category-btn">Pickup Trucks</button>
+        <button class="category-btn">Sports Cars</button>
+        <button class="category-btn">MPVs / Family Vans</button>
+        <button class="category-btn">Electric Vehicles (EVs)</button>
+        <button class="scroll-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="cars-grid">
+        <div class="featured-card">
+            <h2>ALL-NEW<br>SUV LINEUP 2026</h2>
+            <p>Discover the ultimate in luxury and capability. Where comfort meets adventure.</p>
+            <button class="add-cart-btn">
+                <span></span> Buy Now
+            </button>
+        </div>
+        {% for car in cars_list %}
+        <div class="car-card">
+            <img src="{{ url_for('static', filename='img/' ~ car.img)}}" alt="{{ car.name }}" class="car-image">
+            <h3>{{ car.name }}</h3>
+            <p class="price">{{ car.price }}</p>
+            <a href=" " class="products">Explore</a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% endblock %}

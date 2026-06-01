@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin:10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: var;
+    border-radius: 10px;
+}
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.contact-info i {
+    color: #ff3c00;
+    margin-right: 8px;
+}

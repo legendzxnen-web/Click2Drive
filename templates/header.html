@@ -1,0 +1,26 @@
+<header>
+    <div class="header-container">
+        <h1 class="logo">Click2Drive</h1>
+        <nav>
+            <a href="{{url_for('home')}}" class="active-nav">Home</a>
+            <a href="{{url_for('cars')}}">Cars</a>
+            <a href="{{url_for('about_us')}}">About Us</a>
+            <a href="{{url_for('contact')}}">Contact</a>
+
+            {% if session.get('user_id') %}
+                <div class="nav-user">
+                    <span class="nav-greeting">Hi, {{ session.get('user_name') }}</span>
+                    <a href="{{ url_for('logout') }}" class="nav-logout">Logout</a>
+                </div>
+            {% else %}
+                <a href="{{url_for('login_page')}}">Login</a>
+                <a href="{{url_for('signup_page')}}" class="nav-signup">Sign Up</a>
+            {% endif %}
+
+            <input type="text" placeholder="Search here..." class="search-bar">
+            <a class="cart" href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </nav>
+    </div>
+</header>

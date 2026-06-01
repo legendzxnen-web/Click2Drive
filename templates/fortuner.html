@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click2Drive | Products | FORTUNER</title>
+    <link href="{{ url_for('static', filename='css/fortuner.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Click2Drive</h1>
+            <nav>
+                <a href="{{url_for('home')}}">Home</a>
+                <a href="{{url_for('cars')}}" class="active-nav">Cars</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="sign_up.html">Sign Up</a>
+                <input type="text" placeholder="Search here..." class="search-bar">
+                <a class="cart" href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='img/Fortuner.png')}}" alt="Toyota Fortuner">
+        </div>
+
+        <div class="text-section">
+            <h2>Toyota Fortuner Overview</h2>
+            <p>
+                The Toyota Fortuner is the best-selling midsize SUV in the Philippines. This ladder-frame vehicle has
+                been around since the early 2000s and has since become a household name thanks to its rugged platform
+                and tested durability thanks to its robust platform and strong brand support. The second-generation
+                model has been consistently topping the sales chart, not only in its segment but for the entire
+                Philippine automotive industry as well. Fast-forward to October 2020, and the Toyota Motor Philippines
+                finally brings in the updated version of the midsize SUV.
+
+                The Toyota Fortuner is a body-on-frame SUV that rides on the IMV platform. The Hilux and the Innova
+                share this platform, along with the engine options but with varying outputs. Design-wise, the refreshed
+                version of the Fortuner is sleeker than before, plus, buyers get to opt for a sportier and more rugged
+                LTD trim, which could either be had in a 4x2 or 4x4 configuration.
+
+                Inside, the Fortuner can seat seven people, with the option to fold the third-row seats to the side in
+                order to accommodate more cargo. The Fortuner also has the advantage of having better amenities compared
+                to the cars it shares its platform with.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

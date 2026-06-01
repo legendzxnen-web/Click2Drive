@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+
+:root {
+    --primary-red: #f40552;
+    --primary-red-hover: #d00445;
+    --background-dark: #000;
+    --background-card: #0d0d0d;
+    --text-main: #fff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --font-stack: 'Montserrat', sans-serif;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--background-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--text-main);
+    padding: 0.8rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+header h1.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    position: relative;
+    border-radius: 5px;
+}
+
+nav a:hover, nav a.active-nav {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    background-color: var(--primary-red);
+    transform: scaleX(0);
+    transition: var(--transition-smooth);
+}
+
+nav a:hover::after, nav a.active-nav::after {
+    transform: scaleX(1);
+}
+
+.search-bar {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #1a1a1a;
+    color: var(--text-main);
+    border: 1px solid #333;
+    outline: none;
+    font-size: 0.85rem;
+    width: 200px;
+    transition: var(--transition-smooth);
+    margin-left: 20px;
+}
+
+.search-bar:focus {
+    width: 280px;
+    border-color: var(--primary-red);
+}
+
+nav a.cart {
+    font-size: 1.1rem;
+    margin-left: 15px;
+    color: var(--text-muted);
+}
+
+nav a.cart:hover {
+    color: var(--primary-red);
+    background: transparent;
+}
+
+body {
+    margin-top: 80px; 
+    padding-bottom: 60px;
+}
+
+main {
+    margin-top: 80px; 
+    padding-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 25px 25px;
+}
+
+.image-section img {
+    width: 700px;
+    max-width: 200%;
+    border-radius: 10px;
+}
+
+.text-section {
+    max-width: 500px;
+}
+
+.text-section h2 {
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+footer {
+    padding: 80px 0 50px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.copyright-text {
+    text-align: center;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.copyright-text a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+}
+
+.copyright-text a:hover {
+    color: var(--text-muted);
+}
+
+@media (max-width: 1200px) {
+    .hero-content h2 { font-size: 3rem; }
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .header-container { flex-direction: column; padding: 10px; gap: 10px; }
+    .search-bar { margin: 10px 0; width: 100%; }
+    main { margin-top: 140px; }
+}
+
+@media (max-width: 768px) {
+    .hero-content h2 { font-size: 2.2rem; }
+    .product-grid { grid-template-columns: 1fr; }
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
+    .footer-newsletter { margin: 0 auto 25px auto; }
+}
